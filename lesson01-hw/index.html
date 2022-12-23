@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw</title>
+</head>
+
+<style>
+    .converter{
+        padding-top: 120px;
+    }
+</style>
+
+<body>
+
+
+    <section class="circle-area">
+        <h1>Calculate the area of circle</h1>
+        <input type="number" id="myInput" placeholder="write the radius">
+        <button onclick="area()">Calculate</button>
+        <h1>Result:</h1>
+        <h1 id="result">0</h1>
+    </section>
+
+
+    <section class="converter">
+        <h1>Currency Converter</h1>
+        <input type="number" id="usd" placeholder="USD $">
+        <button onclick="converter()">→→→→</button>
+        <span id="uah"> 0 UAH  ₴</span>
+    </section>
+
+
+
+    <script>
+        function area() {
+            let number = document.getElementById("myInput").value;
+            let area = Math.pow(number, 2) * Math.PI;
+            console.log(area);
+            document.getElementById("result").innerText = area;
+        }
+
+
+        function converter() {
+            let usd = document.getElementById("usd").value;
+            const uah = usd * 37.5;
+            console.log(uah);
+            document.getElementById("uah").innerText = uah + " ₴ ";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
