@@ -9,7 +9,11 @@
 </head>
 
 <style>
-    .converter{
+    .converter {
+        padding-top: 120px;
+    }
+
+    .speed {
         padding-top: 120px;
     }
 </style>
@@ -19,23 +23,43 @@
 
     <section class="circle-area">
         <h1>Calculate the area of circle</h1>
-        <input type="number" id="myInput" placeholder="write the radius">
+        <input type="number" id="myInput" min="0" placeholder="write the radius">
         <button onclick="area()">Calculate</button>
-        <h1>Result:</h1>
-        <h1 id="result">0</h1>
+        <span>Result:</span>
+        <span id="result">0</span>
     </section>
+
+
+    <section class="speed">
+        <h2>How fast do you need to move to be on time?</h2>
+        <span>Distance:</span>
+        <input type="number" id="distance" min="0" placeholder="write the distance in km">
+        <span> Time: </span> 
+        <input type="number" id="time" min="0" placeholder="time in hours">
+        <p></p>
+        <button onclick="speed()">Calculate</button>
+        <span>→→→→→→→→→→→→Result:</span>
+        <span id="speed">0 km/h</span>
+
+    </section>
+
+
 
 
     <section class="converter">
         <h1>Currency Converter</h1>
-        <input type="number" id="usd" placeholder="USD $">
+        <input type="number" id="usd" min="0" placeholder="USD $" >
         <button onclick="converter()">→→→→</button>
-        <span id="uah"> 0 UAH  ₴</span>
+        <span id="uah"> 0 UAH ₴</span>
     </section>
 
 
 
+
+
     <script>
+
+
         function area() {
             let number = document.getElementById("myInput").value;
             let area = Math.pow(number, 2) * Math.PI;
@@ -44,9 +68,18 @@
         }
 
 
+        function speed() {
+            let distance = document.getElementById("distance").value;
+            let time = document.getElementById("time").value;
+            console.log(distance, time);
+            let speed = distance / time;
+            document.getElementById("speed").innerText = speed + " km/h ";
+        }
+
+
         function converter() {
             let usd = document.getElementById("usd").value;
-            const uah = usd * 37.5;
+            const uah = usd * 36.56;
             console.log(uah);
             document.getElementById("uah").innerText = uah + " ₴ ";
         }
