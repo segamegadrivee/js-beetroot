@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash drive calculator</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <p> Enter the flash drive size in GB:</p>
+    <input type="number" id="calculator__inp" min="0" placeholder="">
+    <button id="calculator__button" onclick="calculate()"> Calculate </button>
+    <p>
+      <span>How much files can contain: </span> <span id="output__files"> 0</span>
+    </p>
+    <p>
+      <span>Free space on flashdrive: </span> <span id="output__size">0</span> <span>GB</span>
+    </p>
+
+  </div>
+
+
+  <script>
+
+    function calculate() {
+      let inpFlashDriveSize = parseFloat(document.getElementById('calculator__inp').value);
+      const fileSize = 0.85; // 850 mb = 0.85 gb
+      let outFiles = inpFlashDriveSize % fileSize;
+      console.log(outFiles);
+
+
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
