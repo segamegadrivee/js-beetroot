@@ -4,6 +4,7 @@ let tel = document.querySelector('.tel');
 let btn = document.querySelector('button');
 let out = document.querySelector('.out');
 let out2 = document.querySelector('.out2');
+let body = document.querySelector('body');
 
 
 function userAdd(out, name, age, tel) {
@@ -28,11 +29,15 @@ function userAdd(out, name, age, tel) {
         return 0;
     }
 
+    body.style.flexDirection = 'row';
+    body.style.gap = '160px';
 
     out.innerHTML += `
     <li>
-    <span> Name: ${name}</span>
+    <span> Name: ${name}</span> 
+    <br>
     <span> Age: ${age}</span>
+    <br>
     <a href="tel:${tel}">${tel}</a>
     </li>
     `
