@@ -1,8 +1,10 @@
 let name = document.querySelector('.name');
 let age = document.querySelector('.age');
 let tel = document.querySelector('.tel');
-let btn = document.querySelector('button');
-let out = document.querySelector('.out');
+let btn = document.querySelector('.btn');
+let out = document.querySelector('.input-menu');
+let list = document.querySelector('.out');
+let btn2 = document.querySelector('.btn2');
 let body = document.querySelector('body');
 let users = [];
 
@@ -14,13 +16,13 @@ function userAdd(out, name, age, tel) {
 
     // Checking empty inputs 
     if (name == '' || age == '' || tel == '') {
-        alert("You have not entered data in all inputs. ");
+        alert(" ⚠️ You have not entered data in all inputs. ⚠️ ");
         return 0;
     }
 
     // Age can't be negative
     if (age < 0) {
-        alert('You are not born yet :) TRY AGAIN !!!');
+        alert('⚠️ You are not born yet :) TRY AGAIN !!! ⚠️');
         return 0;
     }
 
@@ -30,7 +32,7 @@ function userAdd(out, name, age, tel) {
         console.log('tel OK');
     } else {
         console.log('tel not ok');
-        alert(' Your phone number does not match the format !!!');
+        alert(' ⚠️ Your phone number does not match the format !!! ⚠️');
         return 0;
     }
 
@@ -59,28 +61,28 @@ function userAdd(out, name, age, tel) {
         legalAge: isEighteen(age),
     }
 
-
-
-
     users.push(user);
     console.log(users);
+
 
     // body.style.flexDirection = 'row';
     // body.style.gap = '160px';
 
-    // out.innerHTML += `
-    // <li>
-    // <span> Name: ${name}</span> 
-    // <br>
-    // <span> Age: ${age}</span>
-    // <br>
-    // <a href="tel:${tel}">${tel}</a>
-    // </li>
-    // `
+    btn2.innerHTML = `
+    <button class = 'btn2 btn'>Users List</button>
+    `
+
+    alert(" User has been added ✅ ");
 }
 
 btn.onclick = () => {
     userAdd(out, name.value, age.value, tel.value)
+    name.value = '';
+    age.value = '';
+    tel.value = '';
+}
+
+btn2.onclick = () => {
 
 }
 
