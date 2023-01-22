@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        input {
+            padding: 9px;
+            font-size: 16px;
+            border-width: 0px;
+            border-color: #CCCCCC;
+            background-color: #FFFFFF;
+            color: #000000;
+            border-style: solid;
+            border-radius: 6px;
+            box-shadow: 0px 0px 5px rgba(66, 66, 66, .75);
+            text-shadow: 46px 0px 0px rgba(66, 66, 66, .0);
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+
+        button {
+            background-color: rgba(23, 26, 32, 0.8);
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            height: 36px;
+            line-height: 20px;
+            margin-left: 8px;
+            margin-right: 6px;
+            min-width: 185px;
+            padding: 0 16px 0 16px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(23, 26, 32, 1);
+            cursor: pointer;
+        }
+
+        #h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 1000;
+            font-size: 30px;
+        }
+
+
+
+        .container {
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid rgba(17, 18, 17, 0.8);
+
+
+        }
+
+
+        .result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 id="h1">Image Search</h1>
+            <div class="search">
+                <input type="text">
+                <button>Search</button>
+            </div>
+        </div>
+
+        <div class="result"></div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

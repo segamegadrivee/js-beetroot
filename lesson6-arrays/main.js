@@ -10,6 +10,8 @@ let users = [];
 
 // add id for unique 
 
+
+
 function userAdd(out, name, age, tel) {
 
     let phone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -80,10 +82,12 @@ btn.onclick = () => {
     name.value = '';
     age.value = '';
     tel.value = '';
+
 }
 
 btn2.onclick = () => {
-
+    console.log("User list button click:", users);
+    list.innerHTML = users.map(user => user.name);
 }
 
 
