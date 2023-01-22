@@ -23,11 +23,11 @@ button.addEventListener('click', function (event) {
         })
         .then((data) => {
 
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 12; i++) {
 
                 output.innerHTML += `<a href="${data.hits[i].webformatURL}" target=”_blank”>
                 <img src="${data.hits[i].webformatURL}" width = "300" height = "300"> </a>`;
-                console.log(data);
+                console.log(data.hits[i]);
             }
         });
     console.log('test button');
