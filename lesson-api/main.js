@@ -14,22 +14,29 @@ let API_KEY = '33019011-2e797f6a76fece48049c4f237';
 
 button.addEventListener('click', function (event) {
 
-    let URL = "https://pixabay.com/api/?key=" + API_KEY + "&q=" + encodeURIComponent(input.value);
+    if (input.value == "") {
+        alert('Write something')
+        return 0;
+    } else {
+        let URL = "https://pixabay.com/api/?key=" + API_KEY + "&q=" + encodeURIComponent(input.value);
 
 
-    fetch(URL)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
+        fetch(URL)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
 
-            for (let i = 0; i < 12; i++) {
+                for (let i = 0; i < 12; i++) {
 
-                output.innerHTML += `<a href="${data.hits[i].webformatURL}" target=”_blank”>
+                    output.innerHTML += `<a href="${data.hits[i].webformatURL}" target=”_blank”>
                 <img src="${data.hits[i].webformatURL}" width = "300" height = "300"> </a>`;
-                console.log(data.hits[i]);
-            }
-        });
-    console.log('test button');
-    output.innerHTML = "";
+                    console.log(data.hits[i]);
+                }
+            });
+        console.log('test button');
+        output.innerHTML = "";
+
+    }
+
 })
