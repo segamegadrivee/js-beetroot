@@ -21,6 +21,7 @@ body {
     border-radius: 30px;
     padding: 0 50px;
     border: 5px dashed rgba(17, 18, 17, 0.248);
+    /* box-shadow: 10px 5px 10px rgba(17, 18, 17, 0.248); */
 
 }
 
@@ -42,23 +43,35 @@ body {
 .main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin: 50px;
     background-color: white;
     border-radius: 30px;
     padding: 50px;
+
 }
 
 
 .main__usercard {
     padding: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 400px;
     width: 300px;
     border-radius: 30px;
-    border: 1px solid black;
+    border: 3px solid rgba(17, 18, 17, 0.248);
+
+}
+
+.main__usercard:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 10px rgba(17, 18, 17, 0.248);
+}
+
+.usercard__avatar {
+    border-radius: 50%;
 }
 
 .btn {

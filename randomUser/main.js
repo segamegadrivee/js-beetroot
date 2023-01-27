@@ -1,6 +1,7 @@
 let slider = document.querySelector(".header__range");
 let count = document.querySelector(".header__counter");
 let headerButton = document.querySelector(".header__button");
+let out = document.querySelector('.main');
 
 
 slider.oninput = function () {
@@ -11,4 +12,27 @@ slider.oninput = function () {
 
 function createCard(quantity) {
 
+    for (let i = 0; i < quantity; i++) {
+        out.innerHTML +=
+            `  <div class="main__usercard">
+
+              </div>
+        `
+    }
 }
+
+
+
+
+
+headerButton.onclick = () => {
+
+    createCard(slider.value)
+
+
+
+}
+
+
+
+
