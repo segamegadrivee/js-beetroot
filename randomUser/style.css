@@ -10,6 +10,7 @@ body {
 }
 
 
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -67,12 +68,52 @@ body {
 
 .main__usercard:hover {
     transition: 0.5s;
+    /* scale: 1.03; */
     box-shadow: 10px 10px 10px rgba(17, 18, 17, 0.248);
 }
 
 .usercard__avatar {
     border-radius: 50%;
+    margin-bottom: 20px;
 }
+
+.usercard__fullname {
+    font-size: 25px;
+    font-weight: 800;
+    color: black;
+}
+
+.usercard__region {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #363636c0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(17, 18, 17, 0.248);
+    /* opacity: 75%; */
+}
+
+.usercard__description {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+/* .usercard__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 800;
+} */
 
 .btn {
     color: #fff;
