@@ -2,6 +2,8 @@ let slider = document.querySelector(".header__range");
 let count = document.querySelector(".header__counter");
 let headerButton = document.querySelector(".header__button");
 let out = document.querySelector('.main');
+let users = [];
+
 
 
 
@@ -10,6 +12,10 @@ slider.oninput = function () {
 }
 
 
+function removeDuplicates(arr) {
+    let uniquearray = Array.from(new Set(arr))
+    return uniquearray
+}
 
 function createCard(quantity) {
     for (let i = 0; i < quantity; i++) {
@@ -32,6 +38,10 @@ function createCard(quantity) {
                         </div>
                     </div>`;
 
+                users.push(data.results[0].location.country);
+
+
+
             });
     }
 
@@ -40,14 +50,12 @@ function createCard(quantity) {
 
 
 
-
 headerButton.onclick = () => {
-
     createCard(slider.value)
 
 
-
 }
+
 
 
 
